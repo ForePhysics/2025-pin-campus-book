@@ -3,7 +3,7 @@ name: Deploy Gatsby Site to GitHub Pages
 on:
   push:
     branches:
-      - main  # 根据你的主分支名称修改，比如是 main、master 或 dyy-branch 等
+      - wzqvip-patch-1
 
 permissions:
   contents: read
