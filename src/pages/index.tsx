@@ -89,7 +89,7 @@ const IndexPage: FC<PageProps> = () => {
       case '吴瑜青':
         return <StaticImage src="../images/wyq.jpg" alt="吴瑜青" width={65} height={65} layout="fixed" placeholder="none"/>;
       case '刘翼飞':
-        return <StaticImage src="../images/lyf.png" alt="刘翼飞" width={65} height={65} layout="fixed" placeholder="none"/>;
+        return <StaticImage src="../images/lyf.jpg" alt="刘翼飞" width={65} height={65} layout="fixed" placeholder="none"/>;
       case '戴梦瑶':
         return <StaticImage src="../images/dmy.png" alt="戴梦瑶" width={65} height={65} layout="fixed" placeholder="none"/>;
       case '张天祺':
