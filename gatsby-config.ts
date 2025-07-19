@@ -1,6 +1,7 @@
 import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
+  assetPrefix: `https://forephysics.github.io/2025-pin-campus-book/`,
   pathPrefix: `/2025-pin-campus-book`,
   siteMetadata: {
     title: `Pin Campus Book`,
@@ -35,5 +36,6 @@ const config: GatsbyConfig = {
     },
   ],
 };
+
 
 export default config;
