@@ -1,0 +1,49 @@
+name: Deploy Gatsby Site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # 根据你的主分支名称修改，比如是 main、master 或 dyy-branch 等
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: ⬇️ Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: ⚙️ Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: 📦 Install Dependencies
+        run: npm ci
+
+      - name: 🔨 Build Gatsby Site
+        run: |
+          npm run build
+          touch public/.nojekyll
+
+      - name: 📤 Upload GitHub Pages Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: 🚀 Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
