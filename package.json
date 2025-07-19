@@ -16,7 +16,7 @@
     "develop": "gatsby develop --host 0.0.0.0",
     "start": "gatsby develop --host 0.0.0.0",
     "build": "gatsby build",
-    "serve": "gatsby serve --host 0.0.0.0",
+    "serve": "gatsby serve",
     "clean": "gatsby clean",
     "typecheck": "tsc --noEmit",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public -b pages -f"

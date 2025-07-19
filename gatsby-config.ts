@@ -1,7 +1,7 @@
 import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
-  pathPrefix: `/`,
+  pathPrefix: `/2025-pin-campus-book`,
   siteMetadata: {
     title: `Pin Campus Book`,
     description: `上科大2025届新生纪念可交互礼物`,
