@@ -44,26 +44,16 @@ const IndexPage: FC<PageProps> = () => {
     }
   ];
 
-  const members1: Member1[] = [
-    { name: '笛韵扬' },
-    { name: '周子涵' },
-    { name: '齐一舟' },
-    { name: '钟奕珈' },
-    { name: '钟阅旸' },
-    { name: '陈怡冰' },
-    { name: '汤恭恪' }
-  ];
+  // 按部门分组的成员数据
+  const membersByDepartment = {
+    '管理部': ['笛韵扬', '钟奕珈' ],
+    '设计部': ['周子涵', '笛韵扬', '齐一舟'],
+    '硬件部': ['王子琪', '汤恭恪', '笛韵扬' ],
+    '软件部': ['陈怡冰', '刘翼飞', '王子琪', '笛韵扬' ],
+    "组装部": [  '笛韵扬' , '陈怡冰',  '齐一舟', '周子涵', '刘翼飞',  '张雅捷', '张天祺'],
+    "支撑人员": ['张雅捷',  '林弘扬', '刘禹彤',  '钟阅旸', '吴瑜青', '刘翼飞', '戴梦瑶', '笛韵扬']
 
-  const members2: Member2[] = [
-    { name: '王子琪' },
-    { name: '刘禹彤' },
-    { name: '吴瑜青' },
-    { name: '刘翼飞' },
-    { name: '戴梦瑶' },
-    { name: '张天祺' },
-    { name: '张雅捷' },
-    { name: '林弘扬' }
-  ];
+  };
 
 
   const StaticImageByName = ({ name }: { name: string }) => {
@@ -143,26 +133,30 @@ const IndexPage: FC<PageProps> = () => {
         {/* Members Section */}
         <section className="members-section mb-2xl">
           <SectionHeader title="项目成员" showArrow={true} />
+          {Object.entries(membersByDepartment).map(([department, members]) => (
+            <div key={department} style={{ marginBottom: '2rem' }}>
+              <h3 style={{ 
+                fontSize: '18px', 
+                fontWeight: 'bold', 
+                marginBottom: '1rem',
+                color: '#333',
+                borderBottom: '2px solid #007bff',
+                paddingBottom: '0.5rem'
+              }}>
+                {department}
+              </h3>
               <div className="members-list">
-                {members1.map((member1, index) => (
+                {members.map((memberName, index) => (
                   <MemberItem 
-                  key={index} 
-                  name={member1.name} 
-                  avatar={member1.avatar} 
-                  imageSrc={<StaticImageByName name={member1.name} /> }
+                    key={`${department}-${index}`} 
+                    name={memberName} 
+                    avatar="" 
+                    imageSrc={<StaticImageByName name={memberName} />}
                   />
                 ))}
               </div>
-              <div className="members-list">
-                {members2.map((member2, index) => (
-                  <MemberItem 
-                  key={index} 
-                  name={member2.name} 
-                  avatar={member2.avatar} 
-                  imageSrc={<StaticImageByName name={member2.name} /> }
-                  />
-                ))}
-                </div>
+            </div>
+          ))}
         </section>
       </div>
     </Layout>
