@@ -21,6 +21,16 @@ const TutorialItem: FC<TutorialItemProps> = ({ title, description, linkTo }) => 
             placeholder="none"
           />
         );
+      case '论坛使用教程':
+        return (
+          <StaticImage
+            className='tutorial-img'
+            src="../images/inter-logo.png"
+            alt="论坛使用教程"
+            layout="fixed"
+            placeholder="none"
+          />
+        );
       case '注意事项':
         return (
           <StaticImage

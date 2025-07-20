@@ -41,7 +41,12 @@ const IndexPage: FC<PageProps> = () => {
       title: '注意事项',
       description: '使用前必须知道的一些小事',
       linkTo: '/precautions'
-    }
+    },
+    {
+      title: '论坛使用教程',
+      description: '什么你不知道我们有创意工坊？！',
+      linkTo: '/forum-tutorial'
+    },
   ];
 
   // 按部门分组的成员数据
