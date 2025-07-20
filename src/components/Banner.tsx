@@ -20,7 +20,10 @@ const Banner: FC = () => {
           src="../images/banner-image1.jpg"
           alt="Banner Image 1"
           loading="lazy"
-          //placeholder="blurred"
+          placeholder="blurred"
+          formats={["auto", "webp", "avif"]}
+          style={{ width: "100%", height: "100%" }}
+          imgStyle={{ objectFit: "cover", width: "100%", height: "100%" }}
         />
       ),
     },
@@ -31,7 +34,10 @@ const Banner: FC = () => {
           src="../images/banner-image2.jpg"
           alt="Banner Image 2"
           loading="lazy"
-         // placeholder="blurred"
+          placeholder="blurred"
+          formats={["auto", "webp", "avif"]}
+          style={{ width: "100%", height: "100%" }}
+          imgStyle={{ objectFit: "cover", width: "100%", height: "100%" }}
         />
       ),
     },
@@ -42,7 +48,10 @@ const Banner: FC = () => {
           src="../images/banner-image3.jpg"
           alt="Banner Image 3"
           loading="lazy"
-        //  placeholder="blurred"
+          placeholder="blurred"
+          formats={["auto", "webp", "avif"]} 
+          style={{ width: "100%", height: "100%" }}
+          imgStyle={{ objectFit: "cover", width: "100%", height: "100%" }}
         />
       ),
     },
@@ -53,7 +62,10 @@ const Banner: FC = () => {
           src="../images/banner-image4.jpg"
           alt="Banner Image 4"
           loading="lazy"
-          //placeholder="blurred"
+          placeholder="blurred"
+          formats={["auto", "webp", "avif"]}
+          style={{ width: "100%", height: "100%" }}
+          imgStyle={{ objectFit: "cover", width: "100%", height: "100%" }}
         />
       ),
     },
@@ -64,7 +76,10 @@ const Banner: FC = () => {
           src="../images/banner-image5.jpg"
           alt="Banner Image 5"
           loading="lazy"
-          //placeholder="blurred"
+          placeholder="blurred"
+          formats={["auto", "webp", "avif"]}
+          style={{ width: "100%", height: "100%" }}
+          imgStyle={{ objectFit: "cover", width: "100%", height: "100%" }}
         />
       ),
     },

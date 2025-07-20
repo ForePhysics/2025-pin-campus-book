@@ -2,9 +2,10 @@ import React, { FC } from 'react';
 
 interface ProcessItemProps {
     imageSrc: JSX.Element;
+    caption?: string;
 }
 
-const ProcessItem: FC<ProcessItemProps> = ({ imageSrc }) => {
+const ProcessItem: FC<ProcessItemProps> = ({ imageSrc, caption }) => {
   return (
     <div className="process-item card">
       <div className="process-content">
@@ -19,6 +20,21 @@ const ProcessItem: FC<ProcessItemProps> = ({ imageSrc }) => {
             )}
           </div>
         </div>
+        {caption && (
+          <div 
+            className="process-caption"
+            style={{
+              padding: '12px 16px',
+              fontSize: '14px',
+              color: '#666',
+              textAlign: 'center',
+              lineHeight: '1.5',
+              marginTop: '8px'
+            }}
+          >
+            {caption}
+          </div>
+        )}
       </div>
     </div>
   );

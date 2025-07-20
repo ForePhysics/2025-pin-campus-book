@@ -120,13 +120,30 @@ const IndexPage: FC<PageProps> = () => {
         <section className="process-section mb-2xl">
           <SectionHeader title="制作过程" showArrow={true} />
           <div className="process-grid grid grid-3">
-          <ProcessItem imageSrc={<StaticImage src="../images/process-image1.jpg" alt="process-image1" />} />
-          <ProcessItem imageSrc={<StaticImage src="../images/process-image2.jpg" alt="process-image2" />} />
-          <ProcessItem imageSrc={<StaticImage src="../images/process-image3.jpg" alt="process-image3" />} />
-          <ProcessItem imageSrc={<StaticImage src="../images/process-image4.jpg" alt="process-image4" />} />
-          <ProcessItem imageSrc={<StaticImage src="../images/process-image5.jpg" alt="process-image5" />} />
-          <ProcessItem imageSrc={<StaticImage src="../images/process-image6.jpg" alt="process-image6" />} />
-
+          <ProcessItem 
+            imageSrc={<StaticImage src="../images/process-image1.jpg" alt="process-image1" />} 
+            caption="大部分的元器件已经使用SMT工艺自动焊接，但是仍有部分需要手工焊接。细小的焊盘需要专心致志地焊接并进行拉伸测试避免虚焊。"
+          />
+          <ProcessItem 
+            imageSrc={<StaticImage src="../images/process-image2.jpg" alt="process-image2" />} 
+            caption="面对大批量烧录的需求，我们基于乐鑫的烧录工具二次开发了一套批量烧录的工具，极大地减少了烧录时间。"
+          />
+          <ProcessItem 
+            imageSrc={<StaticImage src="../images/process-image3.jpg" alt="process-image3" />} 
+            caption="PCB工厂生产的产品距离可用状态仍有多道工序，我们正在对大版面PCB进行拆装分类，然后打磨毛刺，这一过程和高达模型拼装类似。"
+          />
+          <ProcessItem 
+            imageSrc={<StaticImage src="../images/process-image4.jpg" alt="process-image4" />} 
+            caption="PCB设计并非一蹴而就，类似于软件Debug，每一次设计都需要经过打表测试来验证与设计的一致性。"
+          />
+          <ProcessItem 
+            imageSrc={<StaticImage src="../images/process-image5.jpg" alt="process-image5" />} 
+            caption="在团建中，我们的一个娱乐活动是——流水线！想得出这个项目的家里请什么都没用了。"
+          />
+          <ProcessItem 
+            imageSrc={<StaticImage src="../images/process-image6.jpg" alt="process-image6" />} 
+            caption="好看好玩好哇\(^o^)/~好看好玩好哇\(^o^)/~好看好玩好哇\(^o^)/~好看好玩好哇\(^o^)/~"
+          />
           </div>
         </section>
 

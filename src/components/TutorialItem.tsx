@@ -14,10 +14,9 @@ const TutorialItem: FC<TutorialItemProps> = ({ title, description, linkTo }) => 
       case '使用教程':
         return (
           <StaticImage
+            className='tutorial-img'
             src="../images/tutorial-guide.jpg"
             alt="使用教程"
-            width={300}
-            height={150}
             layout="fixed"
             placeholder="none"
           />
@@ -25,12 +24,12 @@ const TutorialItem: FC<TutorialItemProps> = ({ title, description, linkTo }) => 
       case '注意事项':
         return (
           <StaticImage
+            className='tutorial-img'
             src="../images/tutorial-precaution.jpg"
             alt="注意事项"
-            width={300}
-            height={150}
             layout="fixed"
             placeholder="none"
+
           />
         );
       // 默认情况（可选）
