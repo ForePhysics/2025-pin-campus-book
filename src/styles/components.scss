@@ -1003,3 +1003,30 @@
     padding-bottom: 70px;
   }
 }
+
+// Powered by InterStudio 标语样式
+.powered-by {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  font-size: 12px;
+  color: #666;
+  z-index: 1000;
+  font-family: Arial, sans-serif;
+  background: transparent;
+  pointer-events: none;
+  display: block;
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .powered-by {
+    left: 0;
+    right: 0;
+    bottom: 56px; // FloatingTab高度约56px，确保紧贴其上
+    text-align: center;
+    margin-bottom: 4px;
+    font-size: 12px;
+    pointer-events: none;
+  }
+}
