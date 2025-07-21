@@ -1,13 +1,13 @@
 import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
-  assetPrefix: `https://forephysics.github.io/2025-pin-campus-book/`,
+  assetPrefix: `https://www.interstudio.tech/`,
   pathPrefix: `/`,
   siteMetadata: {
     title: `Pin Campus Book`,
     description: `上科大2025届新生纪念可交互礼物`,
     author: `@pincampusbook`,
-    siteUrl: `https://www.pincampusbook.com`,
+    siteUrl: `https://www.interstudio.tech`,
   },
   graphqlTypegen: true,
   plugins: [
